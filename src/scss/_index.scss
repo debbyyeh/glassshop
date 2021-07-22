@@ -50,8 +50,7 @@
                     padding-top: 40px;
                     padding-bottom: 40px;
                     &:hover {
-                        background-color: $bg_pink;
-                        color: black;
+                        color: #650300;
                     }
                 }
             }
@@ -64,10 +63,10 @@
         @include B-pad() {
             background-position-x: -490px;
         }
-        @include mobile() {
-            background-image: url(../../dist/image/banner-sm.png);
-            height: 394px;
-        }
+        // @include mobile() {
+        //     background-image: url(../../dist/image/banner-sm.png);
+        //     height: 394px;
+        // }
     }
     .banner-info {
         flex-direction: column;
@@ -133,7 +132,9 @@
                 }
                 @include pad() {
                     width: 80%;
-                    margin-bottom: 40px;
+                    &:not(:last-child) {
+                        margin-bottom: 40px;
+                    }
                 }
                 @include mobile() {
                     width: 100%;
@@ -147,9 +148,6 @@
                 img {
                     height: 100%;
                 }
-            }
-            .clock {
-                color: $main_color;
             }
             .point {
                 @include word(24px, 36px);
@@ -174,43 +172,60 @@
         }
         .type {
             li {
-                margin-bottom: 32px;
-            }
-        }
-        .img_outer {
-            width: 55%;
-            @include pad() {
-                width: 50%;
-            }
-        }
-        .mobile_type {
-            display: none;
-            @include mobile() {
-                display: block;
-                background-image: url(../../dist/image/product-1.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                justify-content: center;
-                width: 100%;
-                height: 134px;
-                p {
-                    @include word(28px, 72px);
-                    color: $main_color;
-                    font-weight: bold;
+                &:not(:last-child) {
+                    margin-bottom: 32px;
                 }
             }
-        }
-        .type_name {
-            width: 40%;
-            padding-left: 5%;
-            p {
-                @include word(48px, 72px);
-                font-family: "Roboto", sans-serif;
-                color: $main_color;
-                text-transform: uppercase;
-                font-style: italic;
-                @include smallDesk() {
-                    font-size: 28px;
+            .img_outer {
+                width: 55%;
+                @include B-pad {
+                    width: 50%;
+                }
+                @include pad() {
+                    width: 100%;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .type_name {
+                width: 40%;
+                padding-left: 5%;
+                p {
+                    @include word(48px, 72px);
+                    font-family: "Roboto", sans-serif;
+                    color: $main_color;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    @include smallDesk() {
+                        font-size: 28px;
+                    }
+                }
+                @include pad() {
+                    display: none;
+                }
+            }
+            .mobile_content {
+                display: none;
+                @include pad() {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    align-items: center;
+                    p {
+                        @include word(28px, 72px);
+                        font-family: "Roboto", sans-serif;
+                        color: $main_color;
+                        text-transform: uppercase;
+                        font-style: italic;
+                    }
+                    img {
+                        width: 36px;
+                    }
                 }
             }
         }
@@ -224,7 +239,7 @@
         }
         .row-reverse {
             flex-direction: row-reverse;
-            @include pad() {
+            @include B-pad() {
                 flex-direction: row;
             }
         }
@@ -247,6 +262,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             .cross_pic_product {
+                position: relative;
                 width: 48%;
                 @media (max-width: 767px) {
                     width: 100%;
@@ -260,6 +276,23 @@
                 }
                 .corss_pic2 {
                     margin-left: 1%;
+                }
+                .cross_pic_cover {
+                    background-color: black;
+                    opacity: 50%;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        @include word(32px, 25px);
+                        color: $main_color;
+                    }
                 }
             }
         }
@@ -289,10 +322,10 @@
                 border-radius: 4px;
                 @include B-pad() {
                     width: 48%;
+                    margin-bottom: 32px;
                 }
                 @include pad() {
                     width: 100%;
-                    margin-bottom: 32px;
                 }
                 .img_comment {
                     img {
@@ -334,7 +367,7 @@
             width: 450px;
         }
         @include mobile() {
-            width: 345px;
+            width: 300px;
             padding: 0;
         }
         h3 {
@@ -342,11 +375,15 @@
             color: black;
             @include mobile() {
                 @include word(24px, 48px);
+                margin-bottom: 20px;
             }
         }
         .note {
             margin-bottom: 20px;
             @include word(20px, 30px);
+            @include mobile() {
+                @include word(16px, 24px);
+            }
         }
         .form_group {
             label {
@@ -374,6 +411,9 @@
                 }
             }
             &.agree {
+                @include mobile() {
+                    @include word(14px, 21px);
+                }
                 label {
                     margin-bottom: 0;
                 }
@@ -395,7 +435,7 @@
                     color: black;
                 }
                 @include mobile() {
-                    width: 345px;
+                    width: 300px;
                 }
             }
         }
@@ -431,10 +471,9 @@
                     @include smallDesk() {
                         margin-right: 40px;
                     }
-                }
-            }
-            .page_link_list {
-                @include pad() {
+                    @include B-pad() {
+                        margin-right: 20px;
+                    }
                 }
             }
             .social_link_list {
