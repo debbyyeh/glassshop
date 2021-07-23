@@ -159,12 +159,10 @@
                 }
             }
             .img_wrap {
-                width: 83px;
-                height: 83px;
                 margin: 0 auto;
                 margin-bottom: 24px;
-                img {
-                    height: 100%;
+                @include mobile {
+                    margin-bottom: 20px;
                 }
             }
             .point {

@@ -349,13 +349,13 @@ body input:hover {
   }
 }
 .index .highlights .highlight_list .img_wrap {
-  width: 83px;
-  height: 83px;
   margin: 0 auto;
   margin-bottom: 24px;
 }
-.index .highlights .highlight_list .img_wrap img {
-  height: 100%;
+@media (max-width: 414px) {
+  .index .highlights .highlight_list .img_wrap {
+    margin-bottom: 20px;
+  }
 }
 .index .highlights .highlight_list .point {
   font-size: 24px;
