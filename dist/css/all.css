@@ -366,6 +366,9 @@ body input:hover {
 .index .highlights .highlight_list .highlight_intro {
   line-height: 24px;
 }
+.index .highlight_material {
+  font-size: 85px;
+}
 .index .category {
   padding-top: 40px;
   padding-bottom: 56px;
