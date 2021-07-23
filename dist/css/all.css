@@ -428,6 +428,10 @@ body input:hover {
     display: none;
   }
 }
+.index .category .type .material-icons-outlined {
+  font-size: 32px;
+  color: #aa0601;
+}
 .index .category .type .mobile_content {
   display: none;
 }

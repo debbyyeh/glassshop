@@ -221,6 +221,10 @@
                     display: none;
                 }
             }
+            .material-icons-outlined {
+                font-size: 32px;
+                color: $main_color;
+            }
             .mobile_content {
                 display: none;
                 @include pad() {
