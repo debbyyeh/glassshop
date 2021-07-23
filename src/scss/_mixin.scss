@@ -8,6 +8,11 @@
     margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
+    @include pad() {
+        font-size: 24px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
 }
 @mixin word-hidden {
     background-repeat: no-repeat;
