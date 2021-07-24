@@ -37,19 +37,18 @@
         @content;
     }
 }
-@mixin B-pad {
+@mixin pad {
     @media (max-width: 768px) {
         @content;
     }
 }
-@mixin pad {
-    @media (max-width: 767px) {
+@mixin L-mobile {
+    @media (max-width: 767px) and (max-width: 414px) {
         @content;
     }
 }
-
 @mixin mobile {
-    @media (max-width: 414px) {
+    @media (max-width: 378px) {
         @content;
     }
 }
