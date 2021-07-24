@@ -14,6 +14,18 @@
         margin-bottom: 20px;
     }
 }
+@mixin sub-title {
+    @include word(48px, 80px);
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 8px solid $main_color;
+    margin-bottom: 60px;
+    @include pad() {
+        @include word(28px, 40px);
+        margin-bottom: 24px;
+        border-left: 4px solid $main_color;
+    }
+}
 @mixin word-hidden {
     background-repeat: no-repeat;
     text-indent: 101%;
