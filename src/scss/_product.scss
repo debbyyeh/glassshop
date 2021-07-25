@@ -68,9 +68,16 @@
                 border-bottom: 5px solid $main_color;
             }
             @include plus() {
+                &:first-child {
+                    width: 25%;
+                }
+                width: 37%;
                 padding: 26px 10px;
             }
             @include mobile() {
+                &:first-child {
+                    width: 27%;
+                }
                 padding: 30px 0px;
             }
         }
