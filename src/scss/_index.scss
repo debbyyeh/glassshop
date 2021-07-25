@@ -5,15 +5,13 @@
     .nav_bar {
         justify-content: space-between;
         padding: 0px 88px;
+        flex-wrap: wrap;
         @include pad() {
             padding: 0px 40px;
         }
         @include plus() {
-            padding: 0px 40px;
-            flex-direction: column;
-        }
-        @include mobile() {
             padding: 0;
+            flex-direction: column;
         }
         .company_logo {
             @include plus() {
@@ -404,12 +402,8 @@
         width: 730px;
         margin: 0 auto;
         padding: 0px 42px;
-        @include pad() {
-            width: 450px;
-        }
         @include plus() {
-            width: 350px;
-            padding: 0;
+            width: 450px;
         }
         @include mobile() {
             width: 300px;
@@ -465,7 +459,6 @@
                 text-align: center;
             }
             input[type="button"] {
-                width: 350px;
                 padding: 16px 0px;
                 background-color: $main_color;
                 outline: none;
@@ -481,12 +474,6 @@
                 &:hover {
                     background-color: $bg_pink;
                     color: black;
-                }
-                @include plus() {
-                    width: 350px;
-                }
-                @include mobile() {
-                    width: 300px;
                 }
             }
         }
