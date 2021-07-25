@@ -5,12 +5,16 @@
     .nav_bar {
         justify-content: space-between;
         padding: 0px 88px;
-        @include smallDesk() {
-            padding: 0px 50px;
+        flex-wrap: wrap;
+        @include pad() {
+            padding: 0px 40px;
         }
-
+        @include plus() {
+            padding: 0;
+            flex-direction: column;
+        }
         .company_logo {
-            @include pad() {
+            @include plus() {
                 margin: 10px 0px;
             }
             a {
@@ -21,7 +25,7 @@
             }
         }
         .header {
-            @include pad() {
+            @include plus() {
                 width: 100%;
             }
             .header_link_list {
@@ -29,6 +33,14 @@
                 li {
                     text-align: center;
                     margin-left: 64px;
+                    @include pad() {
+                        margin-left: 40px;
+                    }
+                    @include plus() {
+                        margin-left: 0;
+                        width: 50%;
+                        border: 1px solid $white;
+                    }
                 }
                 a {
                     color: $white;
@@ -50,6 +62,10 @@
         padding-top: 96px;
         padding-bottom: 160px;
         @include pad() {
+            padding-top: 60px;
+            padding-bottom: 96px;
+        }
+        @include plus() {
             padding-top: 28px;
             padding-bottom: 56px;
         }
@@ -64,6 +80,10 @@
             margin-right: 20px;
             white-space: nowrap;
             @include pad() {
+                font-size: 16px;
+                margin-right: 20px;
+            }
+            @include plus() {
                 font-size: 14px;
                 margin-right: 12px;
             }
@@ -73,25 +93,47 @@
             padding: 8px 10px 8px 16px;
             border: 1px solid #ced4da;
             @include pad() {
+                width: 237px;
+            }
+            @include plus() {
                 width: 277px;
             }
         }
     }
     .location_branch_list {
         flex-wrap: wrap;
+        @include pad() {
+            justify-content: space-between;
+        }
     }
     .location_branch_list > li {
         width: 32%;
         margin-bottom: 32px;
+        @include pad() {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        @include plus() {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 16px;
+        }
     }
     .location_2 {
         margin: 0 1%;
+    }
+    .location_5_pic {
+        height: 225px;
+        overflow: hidden;
     }
     .location_name {
         border: 1px solid $border;
         padding: 16px 24px;
         p {
             @include word(24px, 32px);
+            @include pad() {
+                @include word(16px, 24px);
+            }
         }
     }
     .location_content {
@@ -106,6 +148,7 @@
         .fas,
         .far {
             margin-right: 11px;
+            width: 20px;
         }
         input[type="button"] {
             background-color: black;
@@ -119,6 +162,9 @@
         padding-bottom: 39px;
     }
     .about_us {
+        @include mobile() {
+            padding: 0px 20px;
+        }
         p,
         a {
             color: $white;
@@ -126,11 +172,23 @@
         .links {
             justify-content: space-between;
             margin-bottom: 36px;
+            @include pad() {
+                margin-bottom: 6px;
+            }
             .page_link_list {
+                @include plus() {
+                    display: none;
+                }
                 li {
                     margin-right: 48px;
                     &:hover {
                         border-bottom: 2px solid $white;
+                    }
+                    @include pad() {
+                        margin-right: 40px;
+                    }
+                    @include plus() {
+                        margin-right: 20px;
                     }
                 }
             }
@@ -139,7 +197,7 @@
                     &:not(:first-child) {
                         margin-left: 32px;
                     }
-                    @include mobile() {
+                    @include pad() {
                         &:not(:first-child) {
                             margin-left: 20px;
                         }
@@ -154,15 +212,31 @@
             }
             .call_us_list_mobile {
                 display: none;
+                @include plus() {
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 25px;
+                        margin-right: 20px;
+                    }
+                }
+                @include plus() {
+                    img {
+                        width: 15px;
+                    }
+                }
             }
         }
         .call_us {
-            border-bottom: 1px solid $white;
             .call_us_list {
                 display: flex;
                 align-items: center;
                 &:not(:last-child) {
                     margin-bottom: 16px;
+                    @include plus() {
+                        display: none;
+                    }
                 }
                 &:nth-child(2) {
                     padding-bottom: 24px;
@@ -171,6 +245,16 @@
                 .pic {
                     width: 40px;
                     margin-right: 20px;
+
+                    @include pad() {
+                        width: 36px;
+                    }
+                    @include plus() {
+                        width: 18px;
+                    }
+                    @include mobile() {
+                        width: 15px;
+                    }
                 }
             }
         }
@@ -178,9 +262,23 @@
     .contract {
         justify-content: space-between;
         margin-top: 33px;
+        @include plus() {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         .policy {
             li {
                 margin-left: 48px;
+            }
+            @include plus() {
+                flex-direction: column;
+                align-items: flex-start;
+                li {
+                    margin-left: 0;
+                    &:first-child {
+                        margin: 8px 0px;
+                    }
+                }
             }
         }
     }
