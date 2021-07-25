@@ -763,6 +763,7 @@ body input[type=button] {
   padding-top: 16px;
   outline: auto;
   margin-bottom: 16px;
+  -webkit-appearance: none;
 }
 .index .contact .form_group input[type=checkbox] {
   width: 24px;
