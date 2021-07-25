@@ -60,25 +60,12 @@
     }
     .product_header_list {
         li {
-            width: 33.33333%;
+            flex: 1 0 0%;
             border: 1px solid #dcdcdc;
             text-align: center;
-            padding: 26px 20px;
+            // padding: 26px 0px;
             &:hover {
                 border-bottom: 5px solid $main_color;
-            }
-            @include plus() {
-                &:first-child {
-                    width: 25%;
-                }
-                width: 37%;
-                padding: 26px 10px;
-            }
-            @include mobile() {
-                &:first-child {
-                    width: 27%;
-                }
-                padding: 30px 0px;
             }
         }
         a {
@@ -215,7 +202,9 @@
     .number_link {
         margin: 0 auto;
         .number_link_list {
+            display: flex;
             justify-content: center;
+            align-items: center;
             li {
                 border: 1px solid #555555;
                 text-align: center;
