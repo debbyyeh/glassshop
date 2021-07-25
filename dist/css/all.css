@@ -720,7 +720,8 @@ body input[type=button] {
 }
 @media (max-width: 414px) {
   .index .contact {
-    width: 300px;
+    width: 320px;
+    padding: 0px 15px;
   }
 }
 .index .contact h3 {
