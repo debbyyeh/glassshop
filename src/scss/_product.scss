@@ -8,9 +8,6 @@
         @include pad() {
             flex-direction: column;
         }
-        @include B-pad() {
-            padding: 0px 40px;
-        }
         @include pad() {
             padding: 0;
         }
@@ -34,9 +31,6 @@
                 li {
                     text-align: center;
                     margin-left: 64px;
-                    @include B-pad() {
-                        margin-left: 40px;
-                    }
                     @include pad() {
                         margin-left: 0;
                         width: 50%;
@@ -77,30 +71,14 @@
         p {
             display: inline;
             @include word(32px, 50px);
-            @include B-pad() {
-                font-size: 24px;
-            }
             @include pad() {
                 @include word(14px, 23px);
             }
         }
         .product-icon {
             font-size: 44px;
-            @include B-pad() {
-                font-size: 30px;
-            }
             @include pad() {
                 font-size: 15px;
-            }
-        }
-    }
-    .product_banner {
-        @include B-pad() {
-            .banner {
-                height: 304px;
-            }
-            img {
-                object-fit: cover;
             }
         }
     }
@@ -109,10 +87,6 @@
         color: black;
         padding-top: 80px;
         padding-bottom: 160px;
-        @include B-pad() {
-            padding-top: 56px;
-            padding-bottom: 96px;
-        }
         @include pad() {
             padding-top: 32px;
             padding-bottom: 56px;
@@ -148,10 +122,6 @@
                 margin-bottom: 104px;
                 @include smallDesk() {
                     width: 20%;
-                }
-                @include B-pad() {
-                    width: 48%;
-                    margin-bottom: 72px;
                 }
                 @include pad() {
                     width: 100%;

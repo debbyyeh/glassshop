@@ -11,10 +11,10 @@
         @include pad() {
             padding: 0px 40px;
         }
-        @include Lmobile() {
-            padding: 0;
-            flex-direction: column;
-        }
+        // @include Lmobile() {
+        //     padding: 0;
+        //     flex-direction: column;
+        // }
         .company_logo {
             @include pad() {
                 margin: 10px 0px;
@@ -83,18 +83,18 @@
         }
     }
     .blog_pic {
-        width: 48%;
-        @include Lmobile() {
-            width: 100%;
-        }
+        // width: 48%;
+        // @include Lmobile() {
+        //     width: 100%;
+        // }
     }
     .blog_content {
         width: 48%;
-        margin-left: 2%;
-        @include Lmobile() {
-            width: 100%;
-            margin-left: 0;
-        }
+        // margin-left: 2%;
+        // @include Lmobile() {
+        //     width: 100%;
+        //     margin-left: 0;
+        // }
         .blog_title {
             @include word(32px, 63px);
             color: $main_color;
@@ -119,9 +119,9 @@
         }
     }
     .blog_intro_mobile {
-        @include Lmobile() {
-            display: none;
-        }
+        // @include Lmobile() {
+        //     display: none;
+        // }
         p {
             @include word(20px, 30px);
             color: $gray;
@@ -179,9 +179,9 @@
                     @include smallDesk() {
                         margin-right: 40px;
                     }
-                    @include B-pad() {
-                        margin-right: 20px;
-                    }
+                    // @include B-pad() {
+                    //     margin-right: 20px;
+                    // }
                 }
             }
             .social_link_list {

@@ -8,9 +8,9 @@
         @include smallDesk() {
             padding: 0px 50px;
         }
-        @include B-pad() {
-            padding: 0px 40px;
-        }
+        // @include B-pad() {
+        //     padding: 0px 40px;
+        // }
         @include pad() {
             padding: 0;
             flex-direction: column;
@@ -35,9 +35,9 @@
                 li {
                     text-align: center;
                     margin-left: 64px;
-                    @include B-pad() {
-                        margin-left: 40px;
-                    }
+                    // @include B-pad() {
+                    //     margin-left: 40px;
+                    // }
                     @include pad() {
                         margin-left: 0;
                         width: 50%;
@@ -63,10 +63,10 @@
     .FAQ_list {
         padding-top: 96px;
         padding-bottom: 160px;
-        @include B-pad() {
-            padding-top: 60px;
-            padding-bottom: 96px;
-        }
+        // @include B-pad() {
+        //     padding-top: 60px;
+        //     padding-bottom: 96px;
+        // }
         @include pad() {
             padding-top: 28px;
             padding-bottom: 56px;
@@ -78,10 +78,10 @@
             @include word(32px, 63px);
             font-weight: bold;
             margin-bottom: 36px;
-            @include B-pad() {
-                font-size: 20px;
-                margin-bottom: 32px;
-            }
+            // @include B-pad() {
+            //     font-size: 20px;
+            //     margin-bottom: 32px;
+            // }
             @include pad() {
                 margin-bottom: 24px;
             }
@@ -148,9 +148,9 @@
                     @include smallDesk() {
                         margin-right: 40px;
                     }
-                    @include B-pad() {
-                        margin-right: 20px;
-                    }
+                    // @include B-pad() {
+                    //     margin-right: 20px;
+                    // }
                 }
             }
             .social_link_list {

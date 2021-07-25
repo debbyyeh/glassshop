@@ -8,9 +8,6 @@
         @include smallDesk() {
             padding: 0px 50px;
         }
-        @include B-pad() {
-            padding: 0px 40px;
-        }
         @include pad() {
             padding: 0;
             flex-direction: column;
@@ -35,9 +32,6 @@
                 li {
                     text-align: center;
                     margin-left: 64px;
-                    @include B-pad() {
-                        margin-left: 40px;
-                    }
                     @include pad() {
                         margin-left: 0;
                         width: 50%;
@@ -73,10 +67,6 @@
         color: black;
         padding-top: 80px;
         padding-bottom: 160px;
-        @include B-pad() {
-            padding-top: 56px;
-            padding-bottom: 96px;
-        }
         @include pad() {
             padding-top: 32px;
             padding-bottom: 56px;
@@ -111,9 +101,6 @@
             width: 30%;
             margin: 0 1%;
             margin-bottom: 104px;
-            @include B-pad() {
-                width: 48%;
-            }
             @include pad() {
                 width: 100%;
             }
@@ -125,10 +112,6 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-            }
-            @include B-pad() {
-                width: 330px;
-                height: 164px;
             }
         }
     }
@@ -193,9 +176,6 @@
                     }
                     @include smallDesk() {
                         margin-right: 40px;
-                    }
-                    @include B-pad() {
-                        margin-right: 20px;
                     }
                 }
             }

@@ -5,18 +5,18 @@
     .nav_bar {
         justify-content: space-between;
         padding: 0px 88px;
-        @include smallDesk() {
-            padding: 0px 50px;
-        }
-        @include B-pad() {
+        @include pad() {
             padding: 0px 40px;
         }
-        @include pad() {
-            padding: 0;
+        @include plus() {
+            padding: 0px 40px;
             flex-direction: column;
         }
+        @include mobile() {
+            padding: 0;
+        }
         .company_logo {
-            @include pad() {
+            @include plus() {
                 margin: 10px 0px;
             }
             a {
@@ -27,7 +27,7 @@
             }
         }
         .header {
-            @include pad() {
+            @include plus() {
                 width: 100%;
             }
             .header_link_list {
@@ -35,10 +35,10 @@
                 li {
                     text-align: center;
                     margin-left: 64px;
-                    @include B-pad() {
+                    @include pad() {
                         margin-left: 40px;
                     }
-                    @include pad() {
+                    @include plus() {
                         margin-left: 0;
                         width: 50%;
                         border: 1px solid $white;
@@ -65,16 +65,16 @@
         height: 840px;
         color: $type_color;
         position: relative;
-        @include B-pad() {
+        @include pad() {
             background-position-x: -490px;
         }
-        @include pad() {
+        @include plus() {
             background-image: url(../../dist/image/banner-sm.png);
             background-position: left top;
             background-repeat: no-repeat;
             background-size: cover;
         }
-        @include mobile() {
+        @include plus() {
             height: 394px;
         }
     }
@@ -91,7 +91,7 @@
             @include word(64px, 96px);
             font-weight: bold;
         }
-        @include B-pad() {
+        @include pad() {
             p {
                 @include word(20px, 30px);
             }
@@ -99,7 +99,7 @@
                 @include word(48px, 72px);
             }
         }
-        @include pad() {
+        @include plus() {
             p {
                 @include word(16px, 30px);
             }
@@ -120,7 +120,10 @@
         color: $type_color;
         padding-top: 60px;
         padding-bottom: 80px;
-        @media (max-width: 515px) {
+        @include pad() {
+            padding-top: 40px;
+        }
+        @include plus {
             padding-top: 32px;
             padding-bottom: 40px;
         }
@@ -135,20 +138,20 @@
             justify-content: space-evenly;
             align-items: flex-start;
             flex-wrap: wrap;
-            @include B-pad() {
+            @include pad() {
                 justify-content: space-between;
             }
-            @include pad() {
+            @include plus() {
                 justify-content: center;
             }
             li {
                 width: 22%;
                 margin: 0px 1%;
-                @include B-pad() {
+                @include pad() {
                     width: 48%;
                     text-align: center;
                 }
-                @include pad() {
+                @include plus() {
                     width: 80%;
                     &:not(:last-child) {
                         margin-bottom: 40px;
@@ -161,7 +164,11 @@
             .img_wrap {
                 margin: 0 auto;
                 margin-bottom: 24px;
-                @include mobile {
+                text-align: center;
+                @include pad() {
+                    margin-bottom: 25px;
+                }
+                @include plus() {
                     margin-bottom: 20px;
                 }
             }
@@ -194,10 +201,10 @@
             }
             .img_outer {
                 width: 55%;
-                @include B-pad {
+                @include pad {
                     width: 50%;
                 }
-                @include pad() {
+                @include plus() {
                     width: 100%;
                     position: relative;
                     img {
@@ -214,11 +221,14 @@
                     color: $main_color;
                     text-transform: uppercase;
                     font-style: italic;
-                    @include smallDesk() {
+                    @include pad() {
                         font-size: 28px;
                     }
                 }
                 @include pad() {
+                    width: 45%;
+                }
+                @include plus() {
                     display: none;
                 }
             }
@@ -228,7 +238,7 @@
             }
             .mobile_content {
                 display: none;
-                @include pad() {
+                @include plus() {
                     display: block;
                     position: absolute;
                     top: 50%;
@@ -259,7 +269,7 @@
         }
         .row-reverse {
             flex-direction: row-reverse;
-            @include B-pad() {
+            @include pad() {
                 flex-direction: row;
             }
         }
@@ -271,7 +281,11 @@
     .crossProduct {
         padding-top: 60px;
         padding-bottom: 80px;
-        @media (max-width: 515px) {
+        @include pad() {
+            padding-top: 40px;
+            padding-bottom: 56px;
+        }
+        @include plus() {
             padding-top: 32px;
             padding-bottom: 40px;
         }
@@ -285,7 +299,7 @@
             .cross_pic_product {
                 position: relative;
                 width: 48%;
-                @media (max-width: 767px) {
+                @include plus() {
                     width: 100%;
                     margin: 0;
                     &.corss_pic1 {
@@ -322,7 +336,11 @@
     .comments {
         padding-top: 60px;
         padding-bottom: 80px;
-        @media (max-width: 515px) {
+        @include pad() {
+            padding-top: 40px;
+            padding-bottom: 56px;
+        }
+        @include plus() {
             padding-top: 32px;
             padding-bottom: 40px;
         }
@@ -339,11 +357,11 @@
                 box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
                 border: 1px solid #dee2e6;
                 border-radius: 4px;
-                @include B-pad() {
+                @include pad() {
                     width: 48%;
                     margin-bottom: 32px;
                 }
-                @include pad() {
+                @include plus() {
                     width: 100%;
                 }
                 .img_comment {
@@ -373,7 +391,11 @@
         background-color: $bg_pink;
         padding-top: 60px;
         padding-bottom: 80px;
-        @media (max-width: 515px) {
+        @include pad() {
+            padding-top: 40px;
+            padding-bottom: 56px;
+        }
+        @include plus() {
             padding-top: 32px;
             padding-bottom: 40px;
         }
@@ -382,12 +404,15 @@
         width: 730px;
         margin: 0 auto;
         padding: 0px 42px;
-        @media (max-width: 767px) {
+        @include pad() {
             width: 450px;
+        }
+        @include plus() {
+            width: 350px;
+            padding: 0;
         }
         @include mobile() {
             width: 300px;
-            padding: 0;
         }
         h3 {
             @include title;
@@ -421,14 +446,14 @@
                 width: 24px;
                 height: 24px;
                 margin-bottom: 0;
-                @include mobile() {
+                @include plus() {
                     width: 48px;
                     height: 48px;
                     margin-right: 3px;
                 }
             }
             &.agree {
-                @include mobile() {
+                @include plus() {
                     @include word(14px, 21px);
                 }
                 label {
@@ -456,6 +481,9 @@
                     background-color: $bg_pink;
                     color: black;
                 }
+                @include plus() {
+                    width: 350px;
+                }
                 @include mobile() {
                     width: 300px;
                 }
@@ -482,7 +510,7 @@
                 margin-bottom: 6px;
             }
             .page_link_list {
-                @include pad() {
+                @include plus() {
                     display: none;
                 }
                 li {
@@ -490,10 +518,10 @@
                     &:hover {
                         border-bottom: 2px solid $white;
                     }
-                    @include smallDesk() {
+                    @include pad() {
                         margin-right: 40px;
                     }
-                    @include B-pad() {
+                    @include plus() {
                         margin-right: 20px;
                     }
                 }
@@ -503,7 +531,7 @@
                     &:not(:first-child) {
                         margin-left: 32px;
                     }
-                    @include mobile() {
+                    @include pad() {
                         &:not(:first-child) {
                             margin-left: 20px;
                         }
@@ -518,7 +546,7 @@
             }
             .call_us_list_mobile {
                 display: none;
-                @include pad() {
+                @include plus() {
                     display: block;
                     display: flex;
                     align-items: center;
@@ -527,7 +555,7 @@
                         margin-right: 20px;
                     }
                 }
-                @include mobile() {
+                @include plus() {
                     img {
                         width: 15px;
                     }
@@ -541,22 +569,23 @@
                 align-items: center;
                 &:not(:last-child) {
                     margin-bottom: 16px;
-                    @include pad() {
+                    @include plus() {
                         display: none;
                     }
                 }
                 &:nth-child(2) {
                     padding-bottom: 24px;
                     border-bottom: 1px solid white;
-                    @include pad() {
-                        border-bottom: none;
-                    }
                 }
                 .pic {
                     width: 40px;
                     margin-right: 20px;
+
                     @include pad() {
-                        width: 25px;
+                        width: 36px;
+                    }
+                    @include plus() {
+                        width: 18px;
                     }
                     @include mobile() {
                         width: 15px;
@@ -568,7 +597,7 @@
     .contract {
         justify-content: space-between;
         margin-top: 33px;
-        @include pad() {
+        @include plus() {
             flex-direction: column;
             align-items: flex-start;
         }
@@ -576,7 +605,7 @@
             li {
                 margin-left: 48px;
             }
-            @include pad() {
+            @include plus() {
                 flex-direction: column;
                 align-items: flex-start;
                 li {

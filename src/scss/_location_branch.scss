@@ -8,9 +8,6 @@
         @include smallDesk() {
             padding: 0px 50px;
         }
-        @include B-pad() {
-            padding: 0px 40px;
-        }
         @include pad() {
             padding: 0;
             flex-direction: column;
@@ -35,9 +32,6 @@
                 li {
                     text-align: center;
                     margin-left: 64px;
-                    @include B-pad() {
-                        margin-left: 40px;
-                    }
                     @include pad() {
                         margin-left: 0;
                         width: 50%;
@@ -130,43 +124,34 @@
     .location_branch_content {
         justify-content: space-between;
         align-items: flex-start;
-        @include B-pad() {
-            flex-direction: column;
-        }
     }
     .location_branch {
         width: 48%;
         margin-right: 0 1%;
-        @include B-pad() {
-            width: 100%;
-            .location_branch_list {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 32px;
-                .location_img,
-                .location_content {
-                    width: 48%;
-                    margin: 0 1%;
-                }
-                @media (max-width: 515px) {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 16px;
-                    .location_img,
-                    .location_content {
-                        width: 100%;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-    .location_map {
-        width: 48%;
-        @include B-pad() {
-            width: 100%;
-        }
+        // @include B-pad() {
+        //     width: 100%;
+        //     .location_branch_list {
+        //         display: flex;
+        //         justify-content: space-between;
+        //         align-items: center;
+        //         margin-bottom: 32px;
+        //         .location_img,
+        //         .location_content {
+        //             width: 48%;
+        //             margin: 0 1%;
+        //         }
+        //         @media (max-width: 515px) {
+        //             display: flex;
+        //             flex-direction: column;
+        //             margin-bottom: 16px;
+        //             .location_img,
+        //             .location_content {
+        //                 width: 100%;
+        //                 margin: 0;
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     .footer-fluid {
@@ -199,9 +184,6 @@
                     }
                     @include smallDesk() {
                         margin-right: 40px;
-                    }
-                    @include B-pad() {
-                        margin-right: 20px;
                     }
                 }
             }
