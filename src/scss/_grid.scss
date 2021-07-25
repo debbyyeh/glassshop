@@ -21,6 +21,10 @@ body {
         width: 100%;
         padding: 13px 0px 13px 16px;
         border: 1px solid black;
+        -webkit-appearance: none;
+        /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+        -moz-appearance: none; /* FireFox */
+        appearance: none;
         &:hover {
             cursor: pointer;
         }
