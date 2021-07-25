@@ -407,6 +407,8 @@
             }
             input {
                 margin-bottom: 16px;
+                padding: 13px 0px 13px 16px;
+                border: 1px solid black;
             }
             .textarea {
                 height: 136px;
@@ -445,6 +447,11 @@
                 color: white;
                 font-weight: bold;
                 margin-top: 40px;
+                -webkit-appearance: none;
+                /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+                -moz-appearance: none; /* FireFox */
+                appearance: none;
+                border-radius: 0;
                 &:hover {
                     background-color: $bg_pink;
                     color: black;
