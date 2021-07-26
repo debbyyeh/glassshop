@@ -1117,6 +1117,16 @@ body input[type=button] {
     font-size: 12px;
   }
 }
+.product .banner img {
+  height: 304px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .product .banner img {
+    height: 148px;
+  }
+}
 .product .product_info {
   text-align: center;
   color: black;

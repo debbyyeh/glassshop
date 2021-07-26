@@ -101,6 +101,15 @@
             }
         }
     }
+    .banner {
+        img {
+            height: 304px;
+            object-fit: cover;
+            @include plus() {
+                height: 148px;
+            }
+        }
+    }
     .product_info {
         text-align: center;
         color: black;
