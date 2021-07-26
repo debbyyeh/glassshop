@@ -437,14 +437,13 @@
                 outline: auto;
                 margin-bottom: 16px;
                 -webkit-appearance: none;
+                appearance: none;
             }
             input[type="checkbox"] {
                 width: 24px;
                 height: 24px;
                 margin-bottom: 0;
                 @include plus() {
-                    width: 48px;
-                    height: 48px;
                     margin-right: 3px;
                 }
             }
