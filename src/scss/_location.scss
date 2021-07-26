@@ -90,7 +90,7 @@
         }
         select {
             width: 324px;
-            padding: 8px 10px 8px 16px;
+            padding: 8px 0px;
             border: 1px solid #ced4da;
             @include pad() {
                 width: 237px;
@@ -153,7 +153,11 @@
         input[type="button"] {
             background-color: black;
             color: $white;
+            padding: 20px 0px;
             @include word(19px, 27px);
+            @include pad() {
+                padding: 16px 0px;
+            }
         }
     }
     .footer-fluid {

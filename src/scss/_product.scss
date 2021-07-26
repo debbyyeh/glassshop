@@ -58,6 +58,11 @@
             }
         }
     }
+    .product_header {
+        @include plus() {
+            padding: 0;
+        }
+    }
     .product_header_list {
         display: flex;
         justify-content: center;

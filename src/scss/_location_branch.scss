@@ -90,7 +90,7 @@
         }
         select {
             width: 324px;
-            padding: 8px 10px 8px 16px;
+            padding: 8px 0px;
             border: 1px solid #ced4da;
             @include pad() {
                 width: 237px;
@@ -159,8 +159,10 @@
     }
     .location_map {
         width: 48%;
+        height: 550px;
         @include pad() {
             width: 100%;
+            height: 100%;
         }
     }
     .footer-fluid {

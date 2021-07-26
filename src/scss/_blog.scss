@@ -58,6 +58,38 @@
             }
         }
     }
+    .blog_header-fluid {
+        background-color: $type_color;
+    }
+    .blog_header {
+        justify-content: space-between;
+        @include plus() {
+            justify-content: center;
+        }
+    }
+    .blog_header_list {
+        li {
+            @include word(20px, 24px);
+        }
+        a {
+            text-align: center;
+            color: $white;
+            padding: 12px 48px;
+            &:nth-child(1) {
+                padding-left: 0;
+            }
+            &:hover {
+                filter: brightness(50%);
+            }
+        }
+    }
+    .blog_header_search {
+        color: $white;
+        cursor: pointer;
+        @include plus() {
+            display: none;
+        }
+    }
     .blog_list {
         padding-top: 40px;
         padding-bottom: 160px;
