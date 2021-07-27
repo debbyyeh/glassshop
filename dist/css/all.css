@@ -3196,14 +3196,8 @@ body input[type=button] {
 @media (max-width: 767px) {
   .blog .blog_header_list li {
     font-size: 14px;
-    margin-right: 12px;
-    margin-left: 12px;
-  }
-}
-@media (max-width: 414px) {
-  .blog .blog_header_list li {
-    font-size: 12px;
-    line-height: 24px;
+    margin-right: 6px;
+    margin-left: 6px;
   }
 }
 .blog .blog_header_list a {
@@ -3701,8 +3695,8 @@ body input[type=button] {
 @media (max-width: 767px) {
   .blogPage .blog_header_list li {
     font-size: 14px;
-    margin-right: 12px;
-    margin-left: 12px;
+    margin-right: 6px;
+    margin-left: 6px;
   }
 }
 @media (max-width: 414px) {

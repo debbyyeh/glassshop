@@ -83,11 +83,8 @@
             }
             @include plus() {
                 font-size: 14px;
-                margin-right: 12px;
-                margin-left: 12px;
-            }
-            @include mobile() {
-                @include word(12px, 24px);
+                margin-right: 6px;
+                margin-left: 6px;
             }
         }
         a {
