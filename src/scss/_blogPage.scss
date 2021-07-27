@@ -201,6 +201,9 @@
             &:nth-child(2) {
                 margin-bottom: 12px;
             }
+            @include plus() {
+                @include word(16px, 24px);
+            }
         }
         img {
             width: 100%;
@@ -230,6 +233,10 @@
             margin-right: 16px;
             &:hover {
                 animation: shake 0.8s ease-in;
+                @include plus() {
+                    animation: none;
+                    filter: brightness(40%);
+                }
             }
         }
         @keyframes shake {
