@@ -76,14 +76,14 @@
             font-weight: bold;
             color: black;
             padding: 14px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:hover {
                 border-bottom: 5px solid $main_color;
             }
             @include pad() {
                 padding: 12px 0px;
-            }
-            @include pad() {
-                padding: 8px 0px;
             }
         }
         p {

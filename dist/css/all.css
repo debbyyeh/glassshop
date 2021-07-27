@@ -1081,6 +1081,15 @@ body input[type=button] {
   font-weight: bold;
   color: black;
   padding: 14px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .product .product_header_list a:hover {
   border-bottom: 5px solid #aa0601;
@@ -1088,11 +1097,6 @@ body input[type=button] {
 @media (max-width: 992px) {
   .product .product_header_list a {
     padding: 12px 0px;
-  }
-}
-@media (max-width: 992px) {
-  .product .product_header_list a {
-    padding: 8px 0px;
   }
 }
 .product .product_header_list p {
@@ -1560,35 +1564,43 @@ body input[type=button] {
     padding-bottom: 8px;
   }
 }
+.product_second .product_header_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .product_second .product_header_list li {
-  width: 33.33333%;
-  border: 1px solid #dcdcdc;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
   text-align: center;
-  padding: 26px 20px;
-}
-.product_second .product_header_list li:hover {
-  border-bottom: 5px solid #aa0601;
-}
-@media (max-width: 767px) {
-  .product_second .product_header_list li {
-    width: 37%;
-    padding: 26px 10px;
-  }
-  .product_second .product_header_list li:first-child {
-    width: 25%;
-  }
-}
-@media (max-width: 414px) {
-  .product_second .product_header_list li {
-    padding: 30px 0px;
-  }
-  .product_second .product_header_list li:first-child {
-    width: 27%;
-  }
 }
 .product_second .product_header_list a {
   font-weight: bold;
   color: black;
+  padding: 14px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product_second .product_header_list a:hover {
+  border-bottom: 5px solid #aa0601;
+}
+@media (max-width: 992px) {
+  .product_second .product_header_list a {
+    padding: 12px 0px;
+  }
 }
 .product_second .product_header_list p {
   display: inline;
@@ -1600,7 +1612,7 @@ body input[type=button] {
     font-size: 22px;
   }
 }
-@media (max-width: 515px) {
+@media (max-width: 767px) {
   .product_second .product_header_list p {
     font-size: 14px;
     line-height: 23px;
