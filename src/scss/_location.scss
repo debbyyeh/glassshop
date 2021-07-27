@@ -90,11 +90,8 @@
         }
         select {
             width: 324px;
-            padding: 8px 0px;
+            padding: 8px;
             border: 1px solid #ced4da;
-            border-radius: 0;
-            -webkit-appearance: none;
-            appearance: none;
             @include pad() {
                 width: 237px;
             }
