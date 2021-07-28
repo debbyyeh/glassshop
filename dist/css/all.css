@@ -2511,7 +2511,7 @@ body select {
 }
 .location_branch .location_city select {
   width: 324px;
-  padding: 8px 0px;
+  padding: 8px;
   border: 1px solid #ced4da;
 }
 @media (max-width: 992px) {
@@ -3714,12 +3714,6 @@ body select {
     font-size: 14px;
     margin-right: 6px;
     margin-left: 6px;
-  }
-}
-@media (max-width: 414px) {
-  .blogPage .blog_header_list li {
-    font-size: 12px;
-    line-height: 24px;
   }
 }
 .blogPage .blog_header_list a {
